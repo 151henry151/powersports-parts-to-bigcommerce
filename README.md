@@ -1,6 +1,6 @@
 # powersports-parts-to-bigcommerce
 
-Overview:
+***Overview:***
 
 This program will accept CSV files full of part numbers as input, for example a file like
     
@@ -17,3 +17,13 @@ It will periodically check the databases of each distributor for price, image, d
 It should have a GUI that is very simple and easy to use. Simply click "browse," select your CSV file, if necessary specify which distributor, enter the required credentials, such as the credentials to access the distributor's data and the credentials for the bigcommerce store you want to load parts into, and click "Create Products."
 
 This program should run on windows as an executable. However, the "back-end" can be running on a VPS, hosting the databases needed and doing the actual querying of the distributors.
+
+***Bounties***
+We need the following tasks to be completed and are willing to pay the following amounts (via paypal or bitcoin). They are presented below in order of urgency, with the most urgent tasks first:
+
+1. Write a script which will take Parts Unlimited part numbers as input and make bigcommerce products as output. It will need to 
+    * Query our mysql database which contains all the data they have made available to us so far. This database is already there, and we have an example script that demonstrates how to access the data. 
+    * Interact with the bigcommerce API ( https://github.com/bigcommerce-api-python ) to create the product with the data that it pulled from the mysql database. We have a script that puts products on to bigcommerce already (it just gets the data from a different source) so you have an example to look to for this aspect as well.
+
+2. Fix the broken WPS script, which was working to build products using data pulled from the WPS API, but stopped working when WPS changed over to their new API V2 and discontinued support for the old API. 
+    * Modify an existing script to 
