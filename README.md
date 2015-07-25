@@ -33,4 +33,5 @@ We need the following tasks to be completed and are willing to pay the following
 3. Write an updater script. Offering $50.
     * Write a script which will update our bigcommerce products with fresh data from our distributors. This script will need to check the bigcommerce products for consistency with the most current distributor data. There are more details on the updater project at https://github.com/151henry151/parts-unlimited-to-bigcommerce/blob/master/updater_ideas.md
 
-4. Create a windows interface to these scripts as described earlier in this readme. Offering $50.
+4. Create the windows interface. Offering $50.
+    * Write a windows executable that will allow the end user to work with the other scripts. This readme describes it in an earlier section.
