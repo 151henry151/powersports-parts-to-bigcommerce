@@ -1,6 +1,6 @@
 # powersports-parts-to-bigcommerce
 
-***Overview:***
+**Overview:**
 
 This program will accept CSV files full of part numbers as input, for example a file like
     
@@ -18,12 +18,19 @@ It should have a GUI that is very simple and easy to use. Simply click "browse,"
 
 This program should run on windows as an executable. However, the "back-end" can be running on a VPS, hosting the databases needed and doing the actual querying of the distributors.
 
-***Bounties***
+**Bounties:**
+
 We need the following tasks to be completed and are willing to pay the following amounts (via paypal or bitcoin). They are presented below in order of urgency, with the most urgent tasks first:
 
-1. Write a script which will take Parts Unlimited part numbers as input and make bigcommerce products as output. It will need to 
-    * Query our mysql database which contains all the data they have made available to us so far. This database is already there, and we have an example script that demonstrates how to access the data. 
-    * Interact with the bigcommerce API ( https://github.com/bigcommerce-api-python ) to create the product with the data that it pulled from the mysql database. We have a script that puts products on to bigcommerce already (it just gets the data from a different source) so you have an example to look to for this aspect as well.
+1. Write the primary P.U. to bigcommerce script. Offering $100.
+    * Write a new script which will take Parts Unlimited part numbers as input and make bigcommerce products as output. 
+    * The script will need to query our mysql database which contains all the data that Parts Unlimited has made available to us so far. This database is already there, and we have an example script (https://github.com/151henry151/parts-unlimited-to-bigcommerce/blob/master/python_scripts/pull_from_database.py) that demonstrates how to access the data. 
+    * Then the script will need to interact with the bigcommerce API (https://github.com/bigcommerce-api-python) to create the product with the data that it pulled from the mysql database. We have a script that puts products on to bigcommerce already (https://github.com/151henry151/wps-to-bigcommerce) so you have an example to look to for this aspect as well.
 
-2. Fix the broken WPS script, which was working to build products using data pulled from the WPS API, but stopped working when WPS changed over to their new API V2 and discontinued support for the old API. 
-    * Modify an existing script to 
+2. Fix the broken WPS script. Offering $50.
+    * Modify an existing script (https://github.com/151henry151/wps-to-bigcommerce) which was working, and which builds bigcommerce products using data pulled from the WPS API, but which stopped working when WPS changed over to their new API V2 and discontinued support for the old API.
+
+3. Write an updater script. Offering $50.
+    * Write a script which will update our bigcommerce products with fresh data from our distributors. This script will need to check the bigcommerce products for consistency with the most current distributor data. There are more details on the updater project at https://github.com/151henry151/parts-unlimited-to-bigcommerce/blob/master/updater_ideas.md
+
+4. Create a windows interface to these scripts as described earlier in this readme. Offering an additional $50.
