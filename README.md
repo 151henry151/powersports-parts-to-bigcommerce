@@ -18,21 +18,20 @@ It should have a GUI that is very simple and easy to use. Simply click "browse,"
 
 This program should run on windows as an executable. However, the "back-end" can be running on a VPS, hosting the databases needed and doing the actual querying of the distributors.
 
-**Bounties:**
+We need the following tasks to be completed:
 
-We need the following tasks to be completed and are willing to pay the following amounts (via paypal or bitcoin). They are presented below in order of urgency, with the most urgent tasks first:
 
-1. Write the primary P.U. to bigcommerce script. Offering $120.
+1. Write the primary P.U. to bigcommerce script. 
     * Write a new script which will take Parts Unlimited part numbers as input and make bigcommerce products as output. 
     * The script will need to query our mysql database which contains all the data that Parts Unlimited has made available to us so far. This database is already there, and we have an example script (https://github.com/151henry151/parts-unlimited-to-bigcommerce/blob/master/python_scripts/pull_from_database.py) that demonstrates how to access the data. 
     * Then the script will need to interact with the bigcommerce API (https://developer.bigcommerce.com/api/) to create the product with the data that it pulled from the mysql database. We have a script that puts products on to bigcommerce already, so you have an example to look to for this aspect as well.
     * https://github.com/151henry151/wps-to-bigcommerce - This script is the example script for how to put products onto the e-commerce site using the bigcommerce API. However, there's a catch. It uses the requests module directly, instead of using the bigcommerce API python wrapper (https://github.com/bigcommerce-api-python). For that reason, it might not be the best example script. However, it works, so if you'd rather use the requests module directly in the new script as well, that would probably be fine. Whatever works.
     * 
-2. Fix the broken WPS script. Offering $60.
+2. Fix the broken WPS script. 
     * Modify an existing script (https://github.com/151henry151/wps-to-bigcommerce) which was working, and which builds bigcommerce products using data pulled from the WPS API (it's the example script mentioned above), but which stopped working when WPS changed over to their new API V2 and discontinued support for the old API.
 
-3. Write an updater script. Offering $75.
+3. Write an updater script. 
     * Write a script which will update our bigcommerce products with fresh data from our distributors. This script will need to check the bigcommerce products for consistency with the most current distributor data. There are more details on the updater project at https://github.com/151henry151/parts-unlimited-to-bigcommerce/blob/master/updater_ideas.md
 
-4. Create the windows interface. Offering $150.
+4. Create the windows interface. 
     * Write a windows executable that will allow the end user to work with the other scripts. This readme describes it in an earlier section.
